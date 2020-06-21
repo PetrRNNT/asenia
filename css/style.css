@@ -1,0 +1,1174 @@
+html{
+    box-sizing: border-box;
+}
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+body{
+    overflow-x: hidden;
+    font-family: 'Museo Sans Cyrl 100';
+    font-size: 18px;
+    color: #3d3f44;
+    line-height: 1.3;
+}
+.container{
+    width: 1210px;
+    margin: 0 auto;
+    position: relative;
+    height: 100%;
+    padding: 0 15px;
+}
+.container__header {
+    padding-top: 60px;
+    color: #fff;
+    z-index: 3;
+    background-position: 100% 100%;
+}
+.header{
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+.header::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-color: rgba(48, 53, 56, 0.6);
+}
+.video__media{
+    width: 105%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-height: 100%;
+    height: auto;    
+    transform: translate(-50%,-50%);
+    z-index: 1;
+}
+.background__img{
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 19%;
+    left: 50%;
+    transform: translate(-50%,-34%);
+    z-index: 1;
+    background-image: url(../images/asenia-poster.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.nav-wrapper{
+    display: flex;
+    flex-direction: row;
+}
+.logo{
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo img{
+    width: 204px;
+    position: relative;
+    top: -20px;
+    left: 0;
+}
+.logo .logo__text{
+    font-size: 34px;
+    width: 250px;
+    display: inline-block;
+    line-height: 1.1;
+    position: relative;
+    top: -17px;
+    left: 50px;
+    font-family: '9540';
+}
+.logo .logo__text::before {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 52px;
+    border-radius: 90% 0;
+    background: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    top: 4px;
+    left: -26px;
+}
+
+.lang{
+    display: flex;
+    justify-content: space-between;
+    max-width: 630px;
+    width: 100%;
+    line-height: 28px;
+}
+.lang__items li{
+    position: relative;
+}
+.lang__items li::before{
+    content: "";
+    position: absolute;
+    background-image: url(../images/svg/arrow.svg);
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 10px;
+    top: 10px;
+    right: -12px;
+    cursor: pointer;
+}
+.lang__items{
+    height: 40px;
+    position: relative;
+    display: block;    
+}
+.lang__items li{
+    list-style: none;
+    text-transform: uppercase;
+    font-family: 'MyriadPro-Regular';
+}
+.lang__header-phone{
+    margin-left: 40px;
+    position: relative;
+    left: 100px;
+}
+.lang__header-phone ul{
+    list-style: none;
+    font-family: 'Raleway-Light';
+}
+.lang__header-phone li{
+    display: inline-block;
+    padding: 0 10px;
+    font-size: 22px;
+    position: relative;
+    margin-right: 50px;
+}
+.lang__header-phone li + li::before{
+    content: '|';
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: -15px;
+    opacity: .5;
+}
+.nav__menu{
+    margin-left: 80px;
+}
+.nav__menu li,
+.nav__menu-link li{
+    display: inline-block;
+    padding: 0 10px;
+    position: relative;
+}
+.nav__menu-link{
+    padding-top: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.slider__item p{
+    text-align: center;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+.slider__item-title{
+    font-family: 'Museo Sans Cyrl-500';
+}
+.slider__item-descr{
+    font-family: 'Museo Sans Cyrl 100';
+}
+.slider .slick-dots button{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    padding: 0;
+    margin: 5px;
+    font-size: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    outline: none;
+    position: relative;
+}
+.slider .slick-dots button::after{
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    top: -4px;
+    left: -4px;
+}
+.slider .slick-dots .slick-active button{
+    background-color: #fff;
+}
+.slider .slick-dots .slick-active button::after{
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.slider .slick-dots li{
+    display: inline-block;
+    margin: 0 5px;
+}
+.slider{
+    padding: 115px;
+}
+.slider .slick-dots{
+    z-index: 6;
+    padding: 20px 0 50px 0;
+    text-align: center;
+}
+.servises__descr {
+    display: flex;
+    justify-content: space-around;
+    margin-top: -90px;
+    position: relative;
+    z-index: 7;
+}
+.services__descr-items {
+    text-align: center;
+}
+.services__descr-title{
+    font-family: 'Raleway', sans-serif;
+    font-size: 60px;
+    color: #fff;
+    padding-bottom: 30px;
+}
+.services__descr-text{
+    font-size: 19px;
+    font-family: 'Museo Sans Cyrl-500';
+}
+.services__descr-text sup{
+    font-size: 12px;
+}
+.services__item{
+    margin-top: 90px;
+}
+.services__item-avia{
+    text-align: left;
+}
+.services__item-title{
+    font-size: 25px;
+    display: block;
+    font-family: 'Museo Sans Cyrl-500';
+    max-width: 450px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+.avia__descr{
+    width: 50%;
+}
+.avia__descr span{
+    display: block;
+    font-size: 16px;
+    margin-bottom: 45px;
+    position: relative;
+    margin-left: 25px;
+}
+.avia__descr span::after{
+    content: '';
+    position: absolute;
+    background-image: url(../images/svg/text-dec.svg);
+    background-repeat: no-repeat;
+    height: 11px;
+    width: 14px;
+    left: -22px;
+    top: 5px;
+}
+.services__item-btn{
+    display: inline-block;
+    border: 0;
+    padding: 19px 80px 19px 25px;
+    line-height: 0;
+    text-transform: uppercase;
+    background: #76bd22;
+    font-family: 'Museo Sans Cyrl-500';
+    color: #FFF;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    margin-top: 15px;
+    outline: none;
+}
+.services__item-btn::before{
+    content: '';
+    display: block;
+    width: 10px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    right: 21px;
+    transform: translate(0, -50%);
+    background: url(../images/svg/arrow-btn-services.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 3;
+}
+.services__item-btn::after{
+    content: '';
+    display: block;
+    width: 130%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: calc(-130% + 55px);
+    background: #c3e86c;
+    transition: .5s;
+    transform: skewX(17deg);
+    z-index: 2;
+}
+.services__item-btn:hover.services__item-btn::after{
+    right: -140%;
+}
+.avia__images{
+    display: block;
+    width: 1100px;
+    height: 515px;
+    position: absolute;
+    top: 35px;
+    left: 45%;
+    z-index: 2;
+    animation: avia-fly;
+    animation-duration: 3s;
+}
+.avia__images .lights{
+    position: relative;
+}
+.lights span{
+    position: absolute;
+    background-image: url(../images/svg/avia-light-img.svg);
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+}
+.lights span.light-1{
+    top: 237px;
+    left: 221px;
+    animation-name: light-1;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    opacity: 0;
+}
+.lights span.light-2{
+    top: 244px;
+    left: 295px;
+    animation-name: light-2;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    opacity: 0;
+}
+.lights span.light-3{
+    top: 277px;
+    right: 413px;
+    animation-name: light-3;
+    animation-duration: 2s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    opacity: 0;
+}
+.lights span.light-4{
+    top: 286px;
+    right: 318px;
+    animation-name: light-4;
+    animation-duration: 2s;
+    animation-delay: 41;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    opacity: 0;
+}
+.avia__images img{
+    width: 1100px;
+    height: 515px;
+    object-fit: cover;
+}
+.services__item-shipp-inner{
+    position: relative;
+    display: block;
+}
+.services__item-shipp{
+    text-align: right;
+    position: absolute;
+    top: 70px;
+    right: 50%;
+    background-repeat: no-repeat;
+    width: 740px;
+    height: 560px;
+    background-position: center;
+    z-index: 5;
+}
+.shipp__descr {
+    display: block;
+    text-align: right;
+    position: relative;
+    margin-top: -80px;
+}
+.services__item-shipp-inner::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: -35px;
+    left: -8%;
+    background: #f2f2f2;
+    width: 165%;
+    height: 840px;
+    transform: rotate(-14deg);
+    background-image: url(../images/mask.png);
+    z-index: 4;
+}
+.shipp__descr span{
+    display: block;
+    font-size: 16px;
+    margin-bottom: 45px;
+    position: relative;
+    margin-left: 25px;
+}
+.services__items span::after{
+    content: '';
+    position: absolute;
+    background-image: url(../images/svg/text-dec.svg);
+    background-repeat: no-repeat;
+    height: 11px;
+    width: 14px;
+    left: -22px;
+    top: 5px;
+    transform: rotate(90deg);
+}
+.services__items{
+    width: 50%;
+    text-align: left;
+    display: inline-block;
+    position: relative;
+    margin-top: 180px;
+    z-index: 5;
+}
+.customs__descr{
+    text-align: left;
+    display: block;
+    position: relative;
+}
+.customs__descr span{
+    display: block;
+    font-size: 16px;
+    margin-bottom: 45px;
+    position: relative;
+    margin-left: 25px;
+}
+.customs__descr span::before{
+    content: '';
+    position: absolute;
+    background-image: url(../images/svg/text-dec.svg);
+    background-repeat: no-repeat;
+    height: 11px;
+    width: 14px;
+    left: -22px;
+    top: 5px;
+    transform: rotate(180deg);
+}
+.services__customs-inner{
+    padding-top: 50px;
+}
+.services__item-customs{
+    text-align: right;
+    position: absolute;
+    top: 110px;
+    right: -10%;
+    background-repeat: no-repeat;
+    background-size: 90%;
+    width: 740px;
+    height: 560px;
+    background-position: center;
+    z-index: 5;
+}
+.customs__descr .services__items-customs {
+    width: 50%;
+    margin-top: 125px;
+    text-align: left;
+    display: inline-block;
+    position: relative;
+    z-index: 5;
+}
+.services__item-warehouse-inner{
+    padding-top: 80px;
+    position: relative;
+}
+.services__item-warehouse-inner::before {
+    content: '';
+    display: block;
+    width: 151%;
+    height: 575px;
+    position: absolute;
+    top: 223px;
+    left: -8%;
+    background: #4d4f56;
+    transform: rotate(10.1deg);
+    transition: 1s;
+    background-image: url(../images/mask.png);
+    z-index: 5;
+}
+.warehouse__descr{
+    display: block;
+    text-align: right;
+    position: relative;
+    margin-top: 50px;
+    color: #fff;
+}
+.warehouse__descr span{
+    display: block;
+    font-size: 16px;
+    margin-bottom: 45px;
+    position: relative;
+    margin-left: 25px;
+}
+.services__item-warehouse{
+    text-align: right;
+    position: absolute;
+    top: 70px;
+    right: 50%;
+    background-repeat: no-repeat;
+    width: 740px;
+    height: 560px;
+    background-position: center;
+    z-index: 5;
+}
+.international__descr{
+    width: 50%;
+    margin-top: 125px;
+    text-align: left;
+    display: inline-block;
+    position: relative;
+    z-index: 5;
+}
+.services__item-international {
+    text-align: right;
+    position: absolute;
+    top: 50px;
+    right: -10%;
+    background-repeat: no-repeat;
+    background-size: 90%;
+    width: 729px;
+    height: 653px;
+    background-position: center;
+    z-index: 6;
+}
+.international__descr span{
+    display: block;
+    font-size: 16px;
+    margin-bottom: 45px;
+    position: relative;
+    margin-left: 25px;
+}
+.international__descr span::before{
+    content: '';
+    position: absolute;
+    background-image: url(../images/svg/text-dec.svg);
+    background-repeat: no-repeat;
+    height: 11px;
+    width: 14px;
+    left: -22px;
+    top: 5px;
+    transform: rotate(180deg);
+}
+.services__items-international .services__item-title{
+    min-width: 535px;
+}
+.services__item-consultation-inner{
+    position: relative;
+    margin-top: -50px;
+}
+.services__item-consultation{
+    text-align: right;
+    position: absolute;
+    top: 40%;
+    right: 27%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 415px;
+    background-position: center 6%;
+}
+.consultation__descr {
+    display: block;
+    text-align: right;
+    position: relative;
+    margin-top: 50px;
+}
+.consultation__descr .services__item-btn{
+    margin-bottom: 210px;
+}
+.consultation__descr span{
+    display: block;
+    font-size: 16px;
+    margin-bottom: 45px;
+    position: relative;
+    margin-left: 25px;
+}
+.about{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+.about__block{
+    width: 60%;
+}
+.about__form{
+    padding-top: -100px;
+    width: 40%;
+    padding-left: 15px;
+    position: relative;
+}
+.about__form:before{
+    content: '';
+    display: block;
+    width: 835px;
+    height: 686px;
+    position: absolute;
+    top: -189px;
+    left: -33px;
+    background: url(../images/about-img.jpg);
+    background-repeat: no-repeat;
+    box-shadow: -8px 5px 18px 0 rgba(0, 0, 0, 0.2);
+} 
+
+.about__inner{
+    display: block;
+    background: #f2f2f2;
+    background-image: url(../images/mask.png);
+    background-position: center center;
+    padding-top: 150px;
+    height: 613px;
+}
+.about__inner-items{
+    display: inline-block;
+    width: 125%;
+    flex-direction: row;
+}
+.about__inner-items p{
+    font-size: 27px;
+    font-family: 'Museo Sans Cyrl-500';
+    margin-top: -80px;
+    padding: 0 30px;
+}
+.about__items{
+    display: flex;
+    flex-wrap: wrap;
+    width: 73%;
+    margin-top: 125px;
+    display: flex;
+    justify-content: space-between;
+}
+.about__item{
+    padding: 30px 15px;
+    margin: 30px 0;
+    
+}
+.about__item-title,
+.about__item-descr{
+    font-size: 14px;
+    line-height: 23px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.about__item-title{
+    position: relative;
+}
+.about__item .item-1,
+.about__item .item-2,
+.about__item .item-3,
+.about__item .item-4,
+.about__item .item-5,
+.about__item .item-6{
+    position: relative;
+}
+.about__item .item-1::before,
+.about__item .item-2::before,
+.about__item .item-3::before,
+.about__item .item-4::before,
+.about__item .item-5::before,
+.about__item .item-6::before{
+    content: '';
+    position: absolute;
+    height: 60px;
+    width: 70px;
+    top: -79px;
+    left: 44px;
+    background-repeat: no-repeat;
+}
+.about__item .item-2::before{
+    left: 30px;
+}
+.about__item .item-1::before{
+    background-image: url(../images/item-1.png);
+}
+.about__item .item-2::before{
+    background-image: url(../images/item-2.png);
+}
+.about__item .item-3::before{
+    background-image: url(../images/item-3.png);
+}
+.about__item .item-4::before{
+    background-image: url(../images/item-4.png);
+}
+.about__item .item-5::before{
+    background-image: url(../images/item-5.png);
+}
+.about__item .item-6::before{
+    background-image: url(../images/item-6.png);
+}
+
+
+.form{
+    width: 50%;
+    color: #fff;
+}
+.form__call{
+    position: relative;
+    padding-left: 50px;
+}
+
+.form__call-title {
+    font-size: 25px;
+    line-height: 37px;
+    font-family: 'Museo Sans Cyrl-500';
+    margin-top: -80px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    color: #fff;
+}
+.form__call-desc{
+    font-size: 17px;
+    line-height: 27px;
+    font-weight: 100;
+    text-transform: uppercase;
+    width: 60%;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.form input{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    line-height: 26px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    margin: 20px 0;
+    padding-right: 10px;
+}
+.form input::placeholder{
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 17px;
+    line-height: 26px;
+}
+.inp__wrap{
+    position: relative;
+}
+.form .inp__wrap::before{
+    content: '';
+    position: absolute;
+    background-image: url(../images/svg/text-dec.svg);
+    background-repeat: no-repeat;
+    height: 11px;
+    width: 14px;
+    top: 25px;
+    left: -25px;
+    transform: rotate(180deg);
+}
+.form button{
+    margin-top: 45px;
+}
+.reviews{
+    padding: 100px 0;
+}
+.block__wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.reviews-slider{
+    padding-left: 58px;
+}
+.reviews__block p.reviews__block-logo{
+    font-size: 27px;
+    line-height: 37px;
+    font-family: 'Museo Sans Cyrl-500';
+    text-transform: uppercase;
+    position: relative;
+    padding-left: 58px;
+}
+.reviews__block p.reviews__block-logo::before{
+    content: '';
+    position: absolute;
+    top: -31px;
+    left: -9px;
+    background-image: url(../images/reviews-logo-img.png);
+    background-repeat: no-repeat;
+    width: 75px;
+    height: 100px;
+}
+.reviews__block-btn button{
+    text-transform: uppercase;
+    font-family: 'Museo Sans Cyrl-500';
+    font-size: 16px;
+    line-height: 26px;
+    padding: 5px 40px;
+    background-color: #C3E86C;
+    color: #fff;
+    outline: none;
+    border: none;
+    transition: all .5s;
+    margin-left: 57px;
+    margin-top: 48px;
+}
+.reviews__block-btn button:hover{
+    background-color: #76BD22;
+}
+.social__block{
+    position: relative;
+}
+.social__block:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -90px;
+    width: 67px;
+    height: 314px;
+    background-image: url(../images/dots-img.png);
+}
+.social__block p{
+    font-size: 27px;
+    line-height: 37px;
+    font-family: 'Museo Sans Cyrl-500';
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+.social__block a{
+    display: block;
+    color: #000;
+    margin-bottom: 55px;
+    padding-left: 75px;
+}
+.social__block .social-fb,
+.social__block .social-in,
+.social__block .social-ok{
+    position: relative;
+}
+.social__block .social-fb:before,
+.social__block .social-in:before,
+.social__block .social-ok:before{
+    position: absolute;
+    content: '';
+    top: -14px;
+    left: 0;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    transition: all .5s;
+}
+.social__block .social-fb:before{
+    background-image: url(../images/fb-img.png);
+}
+.social__block .social-in:before{
+    background-image: url(../images/in-img.png);
+}
+.social__block .social-ok:before{
+    background-image: url(../images/ok-img.png);
+}
+.social-fb:hover:before,
+.social-in:hover:before,
+.social-ok:hover:before{
+    transform: scale(1.1);
+    border-radius: 20%;
+    z-index: 2;
+}
+
+.slick-arrow{
+    font-size: 0;
+    border: none;
+    background-image: url(../images/slider-arrow.png);
+    height: 43px;
+    width: 43px;
+    position: absolute;
+    outline: none;
+    transition: all .5s;
+    cursor: pointer;
+}
+.slick-arrow:hover{
+    background-color: #ccc;
+}
+.slick-next{
+    transform: rotate(180deg);
+    top: -42px;
+    right: 0;
+}
+.slick-prev{
+    top: -42px;
+    right: 53px;
+}
+.reviews-slider{
+    padding-left: 58px;
+    width: 600px;
+}
+p.slider__item-text{
+    font-size: 17px;
+    line-height: 26px;
+    font-family: 'Museo Sans Cyrl 100';
+    text-transform: none;
+    text-align: left;
+    margin-top: 50px;
+}
+
+p.slider__item-name{
+    font-family: 'Museo Sans Cyrl 100';
+    text-transform: none;
+    line-height: 29px;
+    font-size: 14px;
+    text-align: left;
+    margin-top: 15px;
+}
+span.position{
+    font-family: 'Museo Sans Cyrl-500';
+    text-transform: none;
+    font-size: 16px;
+    line-height: 26px;
+}
+.all__reviews a{
+    margin-left: 26px;
+    border-bottom: 1px dotted #76BD22;
+    color: #76BD22;
+}
+.contacts{
+    color: #fff;
+    height: 590px;
+    background-color: #4D4F56;
+    background-image: url(../images/mask.png);
+    position: relative;
+}
+.contacts:before{
+    content: '';
+    position: absolute;
+    background-image: url(../images/footer-logo-img.png);
+    background-repeat: no-repeat;
+    width: 224px;
+    height: 153px;
+    bottom: 40px;
+    left: 62%;
+}
+.contacts__info{
+    text-transform: uppercase;
+    font-size: 25px;
+    line-height: 37px;
+    font-family: 'Museo Sans Cyrl-500';
+    padding: 60px 0;
+    position: relative;
+}
+.to-up{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-image: url(../images/up-img.png);
+    right: -20px;
+    top: 36px;
+}
+.contacts .container .contacts__loc{
+    display: inline-block;
+    max-width: 33%;
+    text-align: left;
+}
+.contacts__loc{
+    padding: 0 65px;
+}
+.contacts__loc p{
+    display: block;
+    text-transform: uppercase;
+    font-family: 'Museo Sans Cyrl 100';
+    font-size: 18px;
+    line-height: 16px;
+    margin-bottom: 20px;
+}
+.contacts__loc span{
+    margin-bottom: 15px;
+}
+.contacts__loc span,
+.contacts__loc a.contacts__map {
+    display: block;
+    font-family: 'Museo Sans Cyrl 100';
+    font-size: 15px;
+    line-height: 21px;
+} 
+.contacts__loc a.contacts__map{
+    color: #76BD22;
+    margin-bottom: 45px;
+    border-bottom:1px dotted #76BD22;
+    width: 128px;
+}
+.contact__phone{
+    font-family: 'Museo Sans Cyrl 100';
+    font-size: 25px;
+    line-height: 30px;
+}
+.contact__phone{
+    display: block;
+}
+.contact__mail,
+.requis__link{
+    display: inline-block;
+    color: #76BD22;
+    font-family: 'Museo Sans Cyrl 100';
+    font-size: 15px;
+    line-height: 18px;
+    border-bottom:1px dotted #76BD22;
+}
+.requis{
+    position: absolute;
+    content: '';
+    bottom: 130px;
+    left: 39.1%;
+}
+.requis p{
+    margin-bottom: 3px;
+}
+.logo-item{
+    position: relative;
+}
+.logo-item:before{
+    content: '';
+    position: absolute;
+    background-image: url(../images/footer-logo-item.png);
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 18px;
+    left: -48px;
+    top: 5px;
+}
+.contacts__ru-asenia .logo-item:before{
+    transform: rotate(90deg);
+}
+.contacts__uk-asenia .logo-item:before{
+    transform: rotate(180deg);
+}
+.social-copy{
+    padding-top: 75px;
+}
+.social-copy .copy{
+    position: relative;
+}
+.social-copy .copy:before{
+    content: '';
+    position: absolute;
+    background-image: url(../images/svg/production-logo.svg);
+    background-repeat: no-repeat;
+    background-size: 136%;
+    width: 66px;
+    height: 72px;
+    top: -22px;
+    left: 156px;
+}
+
+.contacts__social li{
+    display: inline-block;
+    list-style: none;
+}
+.contacts__social a{
+    display: inline-block;
+}
+.footer__social-vk{
+    width: 24px;
+    height: 24px;
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    background-image: url(../images/vk-footer-img.png);
+}
+.footer__social-tw{
+    width: 24px;
+    height: 24px;
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    background-image: url(../images/tw-footer-img.png);
+}
+a.footer__social-fb{
+    width: 24px;
+    height: 24px;
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    background-image: url(../images/fb-footer-img.png);
+}
+.contacts__social a.footer__social-ok{
+    width: 24px;
+    height: 24px;
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    background-image: url(../images/ok-footer-img.png);
+}
+@keyframes avia-fly{
+    0%{
+        left: 200%;
+    }
+    100%{
+        left: 45%;
+    }
+}
+@keyframes light-1{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes light-2{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes light-3{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes light-4{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+
+
+.mobile-lang-menu,
+.mobile__avia,
+.mobile__sections-services,
+.about__mobile-inner,
+.mobile__about-me,
+.mobile__reviews,
+.mobile__contacts,
+nav.menu__mobile{
+    display: none;
+}
+

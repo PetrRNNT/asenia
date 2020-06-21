@@ -1,0 +1,55 @@
+@font-face{
+    font-family: '9540';
+    src: url('../fonts/9540.woff2') format('woff2'),
+         url('../fonts/KatherinePlus.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face{
+    font-family: 'Museo Sans Cyrl 100';
+    src: url('../fonts/MuseoSansCyrl100.woff2') format('woff2'),
+         url('../fonts/MuseoSansCyrl100.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face{
+    font-family: 'Museo Sans Cyrl-500';
+    src: url('../fonts/MuseoSansCyrl500.woff2') format('woff2'),
+         url('../fonts/MuseoSansCyrl500.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face{
+    font-family: 'Museo Sans Cyrl 700';
+    src: url('../fonts/MuseoSansCyrl700.woff2') format('woff2'),
+         url('../fonts/MuseoSansCyrl700.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face{
+    font-family: 'Museo Sans Cyrl-900';
+    src: url('../fonts/MuseoSansCyrl900.woff2') format('woff2'),
+         url('../fonts/MuseoSansCyrl900.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face{
+    font-family: 'MyriadPro-Regular';
+    src: url('../fonts/MyriadPro-Regular.woff2') format('woff2'),
+         url('../fonts/MyriadPro-Regular.woff') format('woff');
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face{
+    font-family: 'Raleway-Light';
+    src: url('../fonts/Raleway-Light.woff2') format('woff2'),
+         url('../fonts/Raleway-Light.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+  }
